@@ -33,7 +33,7 @@ python run.py -c=Config_Path -n=MODEL_NAME -m=MODE -p=CKPT_PATH
 - CKPT_PATH: checkpoint path to resume training from or to use for testing
 
 ## Experimental Results
-The checkpoints used for evaluation are available [here]().
+The checkpoints used for evaluation are available [here](https://drive.google.com/drive/folders/1wtnWHfNjO9p0sR95M8W4avhqFUnZHooS?usp=sharing).
 ### Topic Classification 
 |Model|AG News(%)|DBpedia(%)|Params(M)|
 |:--:|:--:|:--:|:--:|
