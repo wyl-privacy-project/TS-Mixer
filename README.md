@@ -1,2 +1,3 @@
 # TS-Mixer: An all-MLP Model via Token Shift
-## The overall architecture of the proposed TS-Mixer
+## TS-Mixer
+![示例图片](https://github.com/wyl-privacy-project/TS-Mixer/blob/main/Figure/TS-Mixer.png)
