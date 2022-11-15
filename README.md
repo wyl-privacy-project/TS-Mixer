@@ -15,19 +15,26 @@ cd TS-Mixer
 conda create -n TSMixer python=3.8 -y
 conda activate TSMixer
 ```
-## Train/Test
+## Caching Vocab Hashes
+
 ```bash
-python run.py -c=Config_Name -n=MODEL_NAME -m=MODE -p=CKPT_PATH
+python projection.py -v=wordpiece/vocab.txt -c=cfg/Config_Path -o=OutPut_File
 ```
-- Config_Name: path to the configurations file
+- Config_Path: path to the configurations file
+- OutPut_File: path where the resulting file will be saved,default='/vocab.npy')
+## Train/Test
+
+```bash
+python run.py -c=Config_Path -n=MODEL_NAME -m=MODE -p=CKPT_PATH
+```
+- Config_Path: path to the configurations file
 - MODEL_NAME: model name to be used for pytorch lightning logging
 - MODE: train or test
 - CKPT_PATH: checkpoint path to resume training from or to use for testing
 
 ## Experimental Results
+The checkpoints used for evaluation are available [here]().
 ### Topic Classification 
-
-
 |Model|AG News(%)|DBpedia(%)|Params(M)|
 |:--:|:--:|:--:|:--:|
 | XLNet | 95.55 | 99.40 | 240 |
