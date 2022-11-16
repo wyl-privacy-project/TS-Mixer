@@ -15,7 +15,7 @@ cd TS-Mixer
 conda create -n TSMixer python=3.8 -y
 conda activate TSMixer
 ```
-## Caching Vocab Hashes
+## Caching Vocab Hashes(like pNLP-Mixer)
 
 ```bash
 python projection.py -v=wordpiece/vocab.txt -c=cfg/Config_Path -o=OutPut_File
