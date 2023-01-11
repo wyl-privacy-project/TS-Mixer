@@ -31,7 +31,7 @@ model:
     feature_size: *feature_size
     hidden_dim: &hidden_dim 256
   mixer:
-    num_mixers: 4
+    num_mixers: 2
     max_seq_len: *max_seq_len
     hidden_dim: *hidden_dim
     mlp_hidden_dim: 256
