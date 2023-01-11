@@ -37,9 +37,9 @@ The checkpoints used for evaluation are available [here](https://drive.google.co
 ### Topic Classification 
 |Model|AG News(%)|DBpedia(%)|Params(M)|
 |:--:|:--:|:--:|:--:|
-| TS-Mixer-S | 91.43 | 98.57 | 0.174 |
-| TS-Mixer-B | 91.99 | 98.69 | 0.429 |
-| TS-Mixer-L | 92.10 | 98.75 | 1.2 |
+| TS-Mixer-S | 91.42 | 98.57 | 0.174 |
+| TS-Mixer-B | 92.16 | 98.69 | 0.429 |
+| TS-Mixer-L | 92.33 | 98.75 | 1.2 |
 
 ### Sentiment Analysis
 
