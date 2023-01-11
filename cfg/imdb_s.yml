@@ -27,7 +27,7 @@ train:
 model:
   projection:
     num_hashes: 64
-    feature_size: &feature_size 512
+    feature_size: &feature_size 1024
   bottleneck:
     feature_size: *feature_size
     hidden_dim: &hidden_dim 64
