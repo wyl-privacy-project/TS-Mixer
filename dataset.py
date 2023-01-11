@@ -45,7 +45,12 @@ class TSMixerDataModule(pl.LightningDataModule):
             self.eval_set = dataset_cls(mode, self.train_cfg.max_seq_len, self.tokenizer, self.projecion,
                                         self.label_map)
         if stage in (None, 'test'):
-            self.test_set = dataset_cls('test', self.train_cfg.max_seq_len, self.tokenizer, self.projecion,
+            if self.train_cfg.dataset_type in ['AGDataset', 'ImdbDataset', "YelpDataset",  'DbpediaDataset',
+                                               'AmazonDataset']:
+                mode = 'test'
+            else:
+                mode = 'validation'
+            self.test_set = dataset_cls(mode, self.train_cfg.max_seq_len, self.tokenizer, self.projecion,
                                         self.label_map)
 
     def train_dataloader(self) -> DataLoader:
