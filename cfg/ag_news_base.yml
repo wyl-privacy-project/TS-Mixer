@@ -1,0 +1,41 @@
+vocab:
+  tokenizer_type: wordpiece
+  tokenizer:
+    vocab: ./wordpiece/vocab.txt
+    lowercase: false
+    strip_accents: false
+    clean_text: false
+  vocab_path: ./vocab_hash.npy
+
+train:
+  type: ag_news
+  dataset_type: AGDataset
+  labels: [0,1,2,3]
+  tensorboard_path: ./logs/
+  log_interval_steps: 10
+  epochs: 10
+  train_batch_size: 128
+  test_batch_size: 128
+  num_workers: 16
+  max_seq_len: &max_seq_len 128
+  optimizer:
+    lr: 5e-4
+    betas: [0.9, 0.999]
+    eps: 1e-8
+
+model:
+  projection:
+    num_hashes: 64
+    feature_size: &feature_size 1024
+  bottleneck:
+    feature_size: *feature_size
+    hidden_dim: &hidden_dim 128
+  mixer:
+    num_mixers: 2
+    max_seq_len: *max_seq_len
+    hidden_dim: *hidden_dim
+    mlp_hidden_dim: 256
+  sequence_cls:
+    hidden_dim: *hidden_dim
+    proj_dim: *hidden_dim
+    num_classes: 4
