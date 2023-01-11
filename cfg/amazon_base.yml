@@ -30,7 +30,7 @@ model:
     feature_size: &feature_size 1024
   bottleneck:
     feature_size: *feature_size
-    hidden_dim: &hidden_dim 64
+    hidden_dim: &hidden_dim 128
   mixer: 
     num_mixers: 2
     max_seq_len: *max_seq_len
