@@ -9,7 +9,7 @@ vocab:
   vocab_path: ./vocab_hash.npy
 
 train:
-  type: amazon_2
+  type: amazon
   dataset_type: AmazonDataset
   labels: [neg, pos] 
   tensorboard_path: ./logs/
